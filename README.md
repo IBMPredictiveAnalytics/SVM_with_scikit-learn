@@ -61,7 +61,7 @@ Contributors
 
 [1]: http://www.apache.org/licenses/LICENSE-2.0.html
 [2]:https://developer.ibm.com/predictiveanalytics/downloads
-[3]:https://github.com/IBMPredictiveAnalytics/SVM_with_scikit-learn/master/SVM_ScikitLearn.mpe
+[3]:https://raw.githubusercontent.com/IBMPredictiveAnalytics/SVM_with_scikit-learn/master/SVM_ScikitLearn.mpe
 [4]:http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html#sklearn.svm.SVC
 [5]:https://raw.githubusercontent.com/IBMPredictiveAnalytics/SVM_with_scikit-learn/master/example/example.str
 [6]:https://raw.githubusercontent.com/IBMPredictiveAnalytics/SVM_with_scikit-learn/master/example/iris.csv
