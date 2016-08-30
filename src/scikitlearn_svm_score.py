@@ -1,5 +1,5 @@
 
-script_details = ("scikitlearn_svm.py",0.5)
+script_details = ("scikitlearn_svm_score.py",0.5)
 
 from pyspark.context import SparkContext
 from pyspark.sql.context import SQLContext
@@ -54,8 +54,12 @@ model_metadata = json.loads(s_metadata)
 import pickle
 clf = pickle.loads(s_model)
 
+predictors = model_metadata['predictors']
+missing_predictors = [predictor for predictor in predictors if predictor not in df.columns]
+if len(missing_predictors):
+    raise Exception("Following fields are required by the model for scoring: "+str(missing_predictors))
 
-df[prediction_field] = clf.predict(df[model_metadata['predictors']])
+df[prediction_field] = clf.predict(df[predictors])
 
 df = sqlCtx.createDataFrame(df)
 

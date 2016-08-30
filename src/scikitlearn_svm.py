@@ -50,7 +50,7 @@ else:
     shrinking=('%%shrinking%%'=='Y')
 
 df = df.toPandas()
-params = {"kernel":kernel,"coef0":coef0,"tol":tol,"degree":degree}
+params = {"kernel":kernel,"coef0":coef0,"tol":tol,"degree":degree, "shrinking":shrinking}
 if gamma != 'auto':
     params["gamma"] = gamma
 
